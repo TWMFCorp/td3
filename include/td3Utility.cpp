@@ -8,18 +8,18 @@ using std::string;
 using std::vector;
 using std::ostringstream;
 
-string td3Utility::toString(int number, bool isFloat)
+string td3Utility::toString(int number, bool fpn)
 {
     ostringstream s;
     s << number;
     return s.str();
 }
 
-string td3Utility::toString(double number, bool isFloat)
+string td3Utility::toString(double number, bool fpn)
 {
     ostringstream s;
     s << number;
-    return s.str();
+    return (fpn && !isFloat(s.str())) ? s.str()+".0" : s.str();
 }
 
 vector<vector<string> > td3Utility::makeVector(string operand1, string operand2)

@@ -18,7 +18,7 @@ These are the files and directories currently in use
 * lua.cpp -- tolua++ generated lua integration file
 * main.cpp -- the main program
 * README -- this readme file
-* register_commands.cpp -- base language command registration handler
+* register\_commands.cpp -- base language command registration handler
 
 Classes
 -------
@@ -31,7 +31,6 @@ Style Guide
 
 All code should be written using Allman style braces. To improve readability 
 'using ns::func' statements should be used in places they will not affect 
-other code. For class header files, this means they should be put within the 
-class definition. For implementation files they can be placed anywhere.
-Internal testing with 'using namespace std' is permitted, but code containing 
-it should not be committed.
+other code. For class headers, they cannot be used. For implementation files they can be placed anywhere.
+
+Internal testing with `using namespace std` and other general `using` statements is permitted, but code containing it should not be committed.
