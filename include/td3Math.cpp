@@ -47,40 +47,40 @@ string td3Math::plus(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));    
-    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) + (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
+    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) + (op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
 }
 
 string td3Math::minus(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));
-    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) - (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
+    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) - (op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
 }
 
 string td3Math::mult(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));
-    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) * (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
+    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) * (op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
 }
 
 string td3Math::div(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));
-    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) / (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
+    return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) / (op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
 }
 
 string td3Math::exponent(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));
-    return td3Utility::toString( pow(td3Utility::stof(operands.at(0).at(0)),(op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0)))), op1 || op2);
+    return td3Utility::toString( pow(td3Utility::stof(operands.at(0).at(0)),(op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0)))), op1 || op2);
 }
 
 string td3Math::mod(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));
-    return td3Utility::toString( fmod((op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))), (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0)))), op1 || op2);
+    return td3Utility::toString( fmod((op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))), (op2 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0)))), op1 || op2);
 }
