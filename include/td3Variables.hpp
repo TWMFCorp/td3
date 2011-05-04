@@ -7,27 +7,24 @@
 
 class td3Variables
 {
-    using std::map;
-    using std::string;
-    using std::vector;
 private:
-    struct less { bool operator() (vector< string > first, vector< string> second); };
-    map< vector<string>,string, less> VarContainer;
-    unsigned int currentDimensions(string name);
-    bool contains(vector<string> needle, vector<string> haystack);
-    bool caseInsensitiveCompare(vector< string > first, vector< string > second);
-    static string toLower(string stol);
+    struct less { bool operator() (std::vector< std::string > first, std::vector< std::string> second); };
+    std::map< std::vector<std::string>,std::string, less> VarContainer;
+    unsigned int currentDimensions(std::string name);
+    bool contains(std::vector<std::string> needle, std::vector<std::string> haystack);
+    bool caseInsensitiveCompare(std::vector< std::string > first, std::vector< std::string > second);
+    static std::string toLower(std::string stol);
 public:
-    string getValue(vector<string> dimensions);
-    string getValue(string name);
-    void setValue(vector<string> dimensions, string value = "");
-    void setValue(string name, string value = "");
-    void unset(vector<string> dimensions);
-    void unset(string name);
-    bool isSet(vector<string> dimensions);
-    bool isSet(string name);
-    vector< vector< string > > nextDimension(vector<string> dimensions);
-    vector< vector< string > > nextDimension(string name);
+    std::string getValue(std::vector<std::string> dimensions);
+    std::string getValue(std::string name);
+    void setValue(std::vector<std::string> dimensions, std::string value = "");
+    void setValue(std::string name, std::string value = "");
+    void unset(std::vector<std::string> dimensions);
+    void unset(std::string name);
+    bool isSet(std::vector<std::string> dimensions);
+    bool isSet(std::string name);
+    std::vector< std::vector< std::string > > nextDimension(std::vector<std::string> dimensions);
+    std::vector< std::vector< std::string > > nextDimension(std::string name);
 
 };
 

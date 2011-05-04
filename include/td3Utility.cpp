@@ -7,8 +7,6 @@
 using std::string;
 using std::vector;
 using std::ostringstream;
-using string::npos;
-
 
 string td3Utility::toString(int number, bool isFloat)
 {
@@ -38,7 +36,7 @@ vector<vector<string> > td3Utility::makeVector(string operand1, string operand2)
 
 bool td3Utility::isFloat(string number)
 {
-    return (number.find(".") != npos);
+    return (number.find(".") != string::npos);
 }
 
 int td3Utility::stoi(string number)

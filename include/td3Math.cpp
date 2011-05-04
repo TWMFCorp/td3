@@ -31,7 +31,7 @@ void td3Math::setFunctions(string operation, string (* func)(vector<vector<strin
         if (operation == "/" || operation == "all")
             functions["/"] = div;
         if (operation == "^" || operation == "all")
-            functions["^"] = pow;
+            functions["^"] = exponent;
         if (operation == "%" || operation == "all")
             functions["%"] = mod;
     }
@@ -71,7 +71,7 @@ string td3Math::div(vector<vector<string> > operands)
     return td3Utility::toString( (op1 ? td3Utility::stof(operands.at(0).at(0)) : td3Utility::stoi(operands.at(0).at(0))) / (op1 ? td3Utility::stof(operands.at(1).at(0)) : td3Utility::stoi(operands.at(1).at(0))), op1 || op2);
 }
 
-string td3Math::pow(vector<vector<string> > operands)
+string td3Math::exponent(vector<vector<string> > operands)
 {
     bool op1 = td3Utility::isFloat(operands.at(0).at(0));
     bool op2 = td3Utility::isFloat(operands.at(1).at(0));

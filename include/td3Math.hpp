@@ -7,21 +7,18 @@
 
 class td3Math
 {
-    using std::map;
-    using std::string;
-    using std::vector;
 private:
-    map<string, string (*)(vector<vector<string> >) > functions;
-    static string plus(vector<vector<string> >);
-    static string minus(vector<vector<string> >);
-    static string mult(vector<vector<string> >);
-    static string div(vector<vector<string> >);
-    static string pow(vector<vector<string> >);
-    static string mod(vector<vector<string> >);
+    std::map<std::string, std::string (*)(std::vector<std::vector<std::string> >) > functions;
+    static std::string plus(std::vector<std::vector<std::string> >);
+    static std::string minus(std::vector<std::vector<std::string> >);
+    static std::string mult(std::vector<std::vector<std::string> >);
+    static std::string div(std::vector<std::vector<std::string> >);
+    static std::string exponent(std::vector<std::vector<std::string> >);
+    static std::string mod(std::vector<std::vector<std::string> >);
 public:
-    void setFunctions(string);
-    void setFunctions(string, string (* func)(vector<vector<string> >));
-    string wrapper(vector<vector<string> >, string);
+    void setFunctions(std::string);
+    void setFunctions(std::string, std::string (* func)(std::vector<std::vector<std::string> >));
+    std::string wrapper(std::vector<std::vector<std::string> >, std::string);
 };
 
 #endif // TD3_MATH_HPP_INCLUDED
