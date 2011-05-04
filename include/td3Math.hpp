@@ -5,20 +5,30 @@
 #include <string>
 #include <map>
 
+//Work around for scoped using statements
+#define map std::map
+#define string std::string
+#define vector std::vector
+
 class td3Math
 {
 private:
-    std::map<std::string, std::string (*)(std::vector<std::vector<std::string> >) > functions;
-    static std::string plus(std::vector<std::vector<std::string> >);
-    static std::string minus(std::vector<std::vector<std::string> >);
-    static std::string mult(std::vector<std::vector<std::string> >);
-    static std::string div(std::vector<std::vector<std::string> >);
-    static std::string exponent(std::vector<std::vector<std::string> >);
-    static std::string mod(std::vector<std::vector<std::string> >);
+    map<string, string (*)(vector<vector<string> >) > functions;
+    static string plus(vector<vector<string> >);
+    static string minus(vector<vector<string> >);
+    static string mult(vector<vector<string> >);
+    static string div(vector<vector<string> >);
+    static string exponent(vector<vector<string> >);
+    static string mod(vector<vector<string> >);
 public:
-    void setFunctions(std::string);
-    void setFunctions(std::string, std::string (* func)(std::vector<std::vector<std::string> >));
-    std::string wrapper(std::vector<std::vector<std::string> >, std::string);
+    void setFunctions(string);
+    void setFunctions(string, string (* func)(vector<vector<string> >));
+    string wrapper(vector<vector<string> >, string);
 };
+
+//undefine the previously defined aliases
+#undef map
+#undef string
+#undef vector
 
 #endif // TD3_MATH_HPP_INCLUDED
