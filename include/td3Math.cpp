@@ -1,3 +1,4 @@
+#include <map>
 #include <vector>
 #include <string>
 #include <cstdlib>
@@ -5,10 +6,13 @@
 #include "td3Math.hpp"
 #include "td3Utility.hpp"
 
+using std::map;
 using std::string;
 using std::vector;
 using std::pow;
 using std::fmod;
+
+map<string, string (*)(vector<vector<string> >)> td3Math::functions;
 
 void td3Math::setFunctions(string operation)
 {

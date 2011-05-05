@@ -13,7 +13,7 @@
 class td3Math
 {
 private:
-    map<string, string (*)(vector<vector<string> >) > functions;
+    static map<string, string (*)(vector<vector<string> >) > functions;
     static string plus(vector<vector<string> >);
     static string minus(vector<vector<string> >);
     static string mult(vector<vector<string> >);
@@ -21,9 +21,9 @@ private:
     static string exponent(vector<vector<string> >);
     static string mod(vector<vector<string> >);
 public:
-    void setFunctions(string);
-    void setFunctions(string, string (* func)(vector<vector<string> >));
-    string wrapper(vector<vector<string> >, string);
+    static void setFunctions(string);
+    static void setFunctions(string, string (* func)(vector<vector<string> >));
+    static string wrapper(vector<vector<string> >, string);
 };
 
 //undefine the previously defined aliases
