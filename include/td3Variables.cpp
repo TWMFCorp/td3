@@ -148,5 +148,5 @@ string& td3Variables::operator[](vector<string> index)
 
 string& td3Variables::operator[](string index)
 {
-    return VarContainer[(vector<string>){index}];
+    return operator[]((vector<string>){index});
 }
