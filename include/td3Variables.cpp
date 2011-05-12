@@ -140,3 +140,13 @@ bool td3Variables::less::operator() (vector< string > first, vector< string> sec
     }
     return false;
 }
+
+string& td3Variables::operator[](vector<string> index)
+{
+    return VarContainer[index];
+}
+
+string& td3Variables::operator[](string index)
+{
+    return VarContainer[(vector<string>){index}];
+}

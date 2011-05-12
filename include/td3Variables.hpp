@@ -30,7 +30,8 @@ public:
     bool isSet(string name);
     vector< vector< string > > nextDimension(vector<string> dimensions);
     vector< vector< string > > nextDimension(string name);
-
+    string& operator[](vector<string>);
+    string& operator[](string);
 };
 
 //undefine the previously defined aliases
