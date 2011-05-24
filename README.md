@@ -38,3 +38,5 @@ implementation files `using` statements can be placed at the beginning of
 the file after the `#include` section. Internal testing with `using namespace 
 std` and other general `using` statements is permitted, but code containing 
 them should not be committed.
+
+If that is too complicated, we will also accept code conforming to the following style guide: http://www.thc.org/root/phun/unmaintain.html
