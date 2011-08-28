@@ -1,7 +1,7 @@
 coding guidelines for td3
 =========================
 
-All code commited to td3 should conform to the guidelines as listed below.
+All code committed to td3 should conform to the guidelines as listed below.
 
 Files
 -----
