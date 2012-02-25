@@ -11,8 +11,8 @@
 class td3Utility
 {
 public:
-    static string toString(int, bool);
-    static string toString(double, bool);
+    static string toString(int, bool fpn = 0);
+    static string toString(double, bool fpn = 1);
     static vector<vector<string> > makeVector(string, string);
     static bool isFloat(string);
     static int stoi(string);
